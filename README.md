@@ -1,4 +1,4 @@
-# Softlight Take-Home — Agent B (UI Workflow Capture System)
+# Agent B (UI Workflow Capture System)
 
 This repository contains my implementation of Agent B, an autonomous UI-navigation agent capable of interpreting natural-language instructions, navigating live web applications, and capturing each intermediate UI state (including views without unique URLs). 
 
