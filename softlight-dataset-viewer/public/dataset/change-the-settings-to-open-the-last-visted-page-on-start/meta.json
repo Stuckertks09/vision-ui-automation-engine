@@ -1,0 +1,7 @@
+{
+  "task": "change the settings to open the last visted page on start",
+  "app": "notion",
+  "steps": 4,
+  "ended": "user-exit",
+  "description": "Agent B executed the task \"change the settings to open the last visted page on start\" against the notion web app.\nIt captured 4 UI states, including any non-URL views such as modals,\nmenus, and inline editors. This dataset represents the real-time workflow the\nagent interpreted and navigated using screenshot analysis, DOM sampling, and\ngeneralized action planning—without any hardcoded selectors or task-specific logic."
+}

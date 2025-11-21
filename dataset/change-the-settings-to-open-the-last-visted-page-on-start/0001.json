@@ -1,0 +1,121 @@
+{
+  "step": 1,
+  "label": "click div[role='button']:has-text('Settings')",
+  "action": {
+    "action": "click",
+    "selector": "div[role='button']:has-text('Settings')",
+    "desiredOption": null,
+    "text": "",
+    "direction": null,
+    "boundingBox": null,
+    "reason": "To change the startup page setting, first open the Settings menu by clicking the 'Settings' button in the sidebar."
+  },
+  "gcsUrl": "https://storage.googleapis.com/softlight-th-dataset/tasks/change-the-settings-to-open-the-last-visted-page-on-start/1_45f9836b-5c7b-47d7-8389-2e065218f1c3.png",
+  "domSample": [
+    {
+      "tag": "div",
+      "role": "button",
+      "text": "K\nKurtis Stuckert’s Space",
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 8,
+        "y": 6,
+        "width": 224,
+        "height": 32,
+        "top": 6,
+        "left": 8,
+        "right": 232,
+        "bottom": 38
+      },
+      "id": null,
+      "classes": "notion-sidebar-switcher",
+      "reactEvent": true
+    },
+    {
+      "tag": "div",
+      "role": "button",
+      "text": null,
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 186,
+        "y": 8,
+        "width": 28,
+        "height": 28,
+        "top": 8,
+        "left": 186,
+        "right": 214,
+        "bottom": 36
+      },
+      "id": null,
+      "classes": null,
+      "reactEvent": true
+    },
+    {
+      "tag": "div",
+      "role": "button",
+      "text": "Search",
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 8,
+        "y": 44,
+        "width": 224,
+        "height": 30,
+        "top": 44,
+        "left": 8,
+        "right": 232,
+        "bottom": 74
+      },
+      "id": null,
+      "classes": null,
+      "reactEvent": true
+    },
+    {
+      "tag": "a",
+      "role": "link",
+      "text": "Home",
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 8,
+        "y": 75,
+        "width": 224,
+        "height": 30,
+        "top": 75,
+        "left": 8,
+        "right": 232,
+        "bottom": 105
+      },
+      "id": null,
+      "classes": null,
+      "reactEvent": true
+    },
+    {
+      "tag": "a",
+      "role": "link",
+      "text": "Meetings",
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 8,
+        "y": 106,
+        "width": 224,
+        "height": 30,
+        "top": 106,
+        "left": 8,
+        "right": 232,
+        "bottom": 136
+      },
+      "id": null,
+      "classes": null,
+      "reactEvent": true
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "task": "sort projects in descending order in the projects tab",
+  "app": "linear",
+  "steps": 3,
+  "ended": "user-canceled",
+  "description": "Agent B executed the task \"sort projects in descending order in the projects tab\" against the linear web app.\nIt captured 3 UI states, including any non-URL views such as modals,\nmenus, and inline editors. This dataset represents the real-time workflow the\nagent interpreted and navigated using screenshot analysis, DOM sampling, and\ngeneralized action planning—without any hardcoded selectors or task-specific logic."
+}

@@ -1,0 +1,1 @@
+npx playwright open --save-storage=auth/LinearAuth.json https://linear.app/login

@@ -1,0 +1,7 @@
+{
+  "task": "create a new project named TestProject17",
+  "app": "linear",
+  "steps": 6,
+  "ended": "success",
+  "description": "Agent B executed the task \"create a new project named TestProject17\" against the linear web app.\nIt captured 6 UI states, including any non-URL views such as modals,\nmenus, and inline editors. This dataset represents the real-time workflow the\nagent interpreted and navigated using screenshot analysis, DOM sampling, and\ngeneralized action planning—without any hardcoded selectors or task-specific logic."
+}

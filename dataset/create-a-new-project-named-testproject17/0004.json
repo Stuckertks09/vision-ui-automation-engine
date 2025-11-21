@@ -1,0 +1,121 @@
+{
+  "step": 4,
+  "label": "type input[placeholder='Project name'], input[aria-label='Project name']",
+  "action": {
+    "action": "type",
+    "selector": "input[placeholder='Project name'], input[aria-label='Project name']",
+    "desiredOption": null,
+    "text": "TestProject17",
+    "direction": null,
+    "boundingBox": null,
+    "reason": "The goal is to create a new project named TestProject17. The UI is prompting for a project name, so the next step is to type 'TestProject17' into the project name input field."
+  },
+  "gcsUrl": "https://storage.googleapis.com/softlight-th-dataset/tasks/create-a-new-project-named-testproject17/4_0b337cf4-71a1-4d31-be39-d8024572a4bf.png",
+  "domSample": [
+    {
+      "tag": "button",
+      "role": null,
+      "text": "CE\nCendralAI",
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 14,
+        "width": 112.1015625,
+        "height": 28,
+        "top": 14,
+        "left": 14,
+        "right": 126.1015625,
+        "bottom": 42
+      },
+      "id": null,
+      "classes": "sc-kbNIDW eqlsfK",
+      "reactEvent": true
+    },
+    {
+      "tag": "button",
+      "role": null,
+      "text": null,
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 166,
+        "y": 14,
+        "width": 28,
+        "height": 28,
+        "top": 14,
+        "left": 166,
+        "right": 194,
+        "bottom": 42
+      },
+      "id": null,
+      "classes": "sc-cpSJdf hJebPu sc-htGmwi sc-ixaRxd dQCAVQ dUbOts",
+      "reactEvent": true
+    },
+    {
+      "tag": "button",
+      "role": null,
+      "text": null,
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 202,
+        "y": 14,
+        "width": 28,
+        "height": 28,
+        "top": 14,
+        "left": 202,
+        "right": 230,
+        "bottom": 42
+      },
+      "id": null,
+      "classes": "sc-iVbIXk gdwgif",
+      "reactEvent": true
+    },
+    {
+      "tag": "div",
+      "role": "button",
+      "text": "Inbox",
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 53,
+        "width": 216,
+        "height": 28,
+        "top": 53,
+        "left": 14,
+        "right": 230,
+        "bottom": 81
+      },
+      "id": null,
+      "classes": "sc-cWGmCi Kqnvo",
+      "reactEvent": true
+    },
+    {
+      "tag": "a",
+      "role": null,
+      "text": "Inbox",
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 53,
+        "width": 216,
+        "height": 28,
+        "top": 53,
+        "left": 14,
+        "right": 230,
+        "bottom": 81
+      },
+      "id": null,
+      "classes": "sc-inqUgg sc-iWdIcl blYnFE",
+      "reactEvent": true
+    }
+  ]
+}

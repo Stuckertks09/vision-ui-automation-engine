@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Dataset Viewer</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #sidebar {
+      width: 280px;
+      background: #f4f4f4;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    #viewer {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    #imageContainer {
+      flex: 1;
+      border: 1px solid #ccc;
+      background: #fafafa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    #imageContainer img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    #jsonContainer {
+      height: 220px;
+      overflow-y: auto;
+      background: #111;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 4px;
+      white-space: pre;
+      font-family: monospace;
+    }
+
+    .folder {
+      padding: 6px 4px;
+      cursor: pointer;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .folder:hover {
+      background: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="sidebar">
+    <h3>Dataset Folders</h3>
+    <div id="folderList">Loading...</div>
+  </div>
+
+  <div id="viewer">
+    <div id="imageContainer"><em>Select a step…</em></div>
+
+    <div style="display:flex; justify-content:space-between; margin-bottom: 10px;">
+      <button onclick="prevStep()">◀ Prev</button>
+      <button onclick="nextStep()">Next ▶</button>
+    </div>
+
+    <div id="jsonContainer">{}</div>
+  </div>
+
+  <script>
+    let steps = [];
+    let idx = 0;
+    let currentFolder = null;
+
+    // ------------------------------
+    // Load folder list
+    // ------------------------------
+    async function loadFolders() {
+      const res = await fetch('/api/dataset');
+      const folders = await res.json();
+
+      const list = document.getElementById('folderList');
+      list.innerHTML = '';
+
+      if (!folders.length) {
+        list.innerHTML = "<em>No dataset folders found</em>";
+        return;
+      }
+
+      folders.forEach(folder => {
+        const div = document.createElement('div');
+        div.className = 'folder';
+        div.textContent = folder;
+        div.onclick = () => loadFolder(folder);
+        list.appendChild(div);
+      });
+    }
+
+    // ------------------------------
+    // Load files in a folder
+    // ------------------------------
+    async function loadFolder(folder) {
+      currentFolder = folder;
+
+      const res = await fetch(`/api/dataset/${folder}`);
+      const files = await res.json();
+
+      // Build steps list
+      steps = files
+        .filter(f => f.endsWith('.png'))
+        .map(f => {
+          const base = f.replace('.png', '');
+          return {
+            img: `/dataset/${folder}/${base}.png`,
+            json: `/dataset/${folder}/${base}.json`
+          };
+        })
+        .sort((a, b) => a.img.localeCompare(b.img));
+
+      idx = 0;
+      renderStep();
+    }
+
+    // ------------------------------
+    // Render current step
+    // ------------------------------
+    async function renderStep() {
+      if (!steps.length) {
+        document.getElementById("imageContainer").innerHTML =
+          "<em>No steps found</em>";
+        return;
+      }
+
+      const step = steps[idx];
+
+      // Image
+      document.getElementById("imageContainer").innerHTML =
+        `<img src="${step.img}" />`;
+
+      // JSON
+      try {
+        const res = await fetch(step.json);
+        const data = await res.json();
+        document.getElementById("jsonContainer").innerText = 
+          JSON.stringify(data, null, 2);
+      } catch {
+        document.getElementById("jsonContainer").innerText =
+          "Error loading JSON";
+      }
+    }
+
+    function nextStep() {
+      if (idx < steps.length - 1) {
+        idx++;
+        renderStep();
+      }
+    }
+
+    function prevStep() {
+      if (idx > 0) {
+        idx--;
+        renderStep();
+      }
+    }
+
+    loadFolders();
+  </script>
+
+</body>
+</html>

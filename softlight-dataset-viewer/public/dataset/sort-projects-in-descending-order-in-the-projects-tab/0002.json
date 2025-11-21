@@ -1,0 +1,121 @@
+{
+  "step": 2,
+  "label": "click button:has-text('Name')",
+  "action": {
+    "action": "click",
+    "selector": "button:has-text('Name')",
+    "desiredOption": null,
+    "text": "",
+    "direction": null,
+    "boundingBox": null,
+    "reason": "Click the 'Name' column header to sort the projects in descending order in the Projects tab."
+  },
+  "gcsUrl": "https://storage.googleapis.com/softlight-th-dataset/tasks/sort-projects-in-descending-order-in-the-projects-tab/2_6ea456ae-9f5e-4202-a3ee-03f589bf8b5a.png",
+  "domSample": [
+    {
+      "tag": "button",
+      "role": null,
+      "text": "CE\nCendralAI",
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 14,
+        "width": 112.1015625,
+        "height": 28,
+        "top": 14,
+        "left": 14,
+        "right": 126.1015625,
+        "bottom": 42
+      },
+      "id": null,
+      "classes": "sc-kbNIDW eqlsfK",
+      "reactEvent": true
+    },
+    {
+      "tag": "button",
+      "role": null,
+      "text": null,
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 166,
+        "y": 14,
+        "width": 28,
+        "height": 28,
+        "top": 14,
+        "left": 166,
+        "right": 194,
+        "bottom": 42
+      },
+      "id": null,
+      "classes": "sc-cpSJdf hJebPu sc-dVmVVl sc-ixaRxd dHeFa-D dUbOts",
+      "reactEvent": true
+    },
+    {
+      "tag": "button",
+      "role": null,
+      "text": null,
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 202,
+        "y": 14,
+        "width": 28,
+        "height": 28,
+        "top": 14,
+        "left": 202,
+        "right": 230,
+        "bottom": 42
+      },
+      "id": null,
+      "classes": "sc-iVbIXk gdwgif",
+      "reactEvent": true
+    },
+    {
+      "tag": "div",
+      "role": "button",
+      "text": "Inbox",
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 53,
+        "width": 216,
+        "height": 28,
+        "top": 53,
+        "left": 14,
+        "right": 230,
+        "bottom": 81
+      },
+      "id": null,
+      "classes": "sc-ktpEuq hvBVUq",
+      "reactEvent": true
+    },
+    {
+      "tag": "a",
+      "role": null,
+      "text": "Inbox",
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 53,
+        "width": 216,
+        "height": 28,
+        "top": 53,
+        "left": 14,
+        "right": 230,
+        "bottom": 81
+      },
+      "id": null,
+      "classes": "sc-inqUgg sc-iWdIcl blYnFE",
+      "reactEvent": true
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+npx playwright open --save-storage=auth/NotionAuth.json https://www.notion.so/login

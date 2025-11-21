@@ -1,0 +1,121 @@
+{
+  "step": 5,
+  "label": "click button:has-text('Create project')",
+  "action": {
+    "action": "click",
+    "selector": "button:has-text('Create project')",
+    "desiredOption": null,
+    "text": "",
+    "direction": null,
+    "boundingBox": null,
+    "reason": "The project name 'TestProject17' is already filled in. Clicking the 'Create project' button will complete the creation of the new project as requested."
+  },
+  "gcsUrl": "https://storage.googleapis.com/softlight-th-dataset/tasks/create-a-new-project-named-testproject17/5_472e2def-aa2c-4376-b3af-4fdf84b3c8d3.png",
+  "domSample": [
+    {
+      "tag": "button",
+      "role": null,
+      "text": "CE\nCendralAI",
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 14,
+        "width": 112.1015625,
+        "height": 28,
+        "top": 14,
+        "left": 14,
+        "right": 126.1015625,
+        "bottom": 42
+      },
+      "id": null,
+      "classes": "sc-kbNIDW eqlsfK",
+      "reactEvent": true
+    },
+    {
+      "tag": "button",
+      "role": null,
+      "text": null,
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 166,
+        "y": 14,
+        "width": 28,
+        "height": 28,
+        "top": 14,
+        "left": 166,
+        "right": 194,
+        "bottom": 42
+      },
+      "id": null,
+      "classes": "sc-cpSJdf hJebPu sc-htGmwi sc-ixaRxd dQCAVQ dUbOts",
+      "reactEvent": true
+    },
+    {
+      "tag": "button",
+      "role": null,
+      "text": null,
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 202,
+        "y": 14,
+        "width": 28,
+        "height": 28,
+        "top": 14,
+        "left": 202,
+        "right": 230,
+        "bottom": 42
+      },
+      "id": null,
+      "classes": "sc-iVbIXk gdwgif",
+      "reactEvent": true
+    },
+    {
+      "tag": "div",
+      "role": "button",
+      "text": "Inbox",
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 53,
+        "width": 216,
+        "height": 28,
+        "top": 53,
+        "left": 14,
+        "right": 230,
+        "bottom": 81
+      },
+      "id": null,
+      "classes": "sc-cWGmCi Kqnvo",
+      "reactEvent": true
+    },
+    {
+      "tag": "a",
+      "role": null,
+      "text": "Inbox",
+      "placeholder": null,
+      "contentEditable": null,
+      "isProseMirror": false,
+      "boundingBox": {
+        "x": 14,
+        "y": 53,
+        "width": 216,
+        "height": 28,
+        "top": 53,
+        "left": 14,
+        "right": 230,
+        "bottom": 81
+      },
+      "id": null,
+      "classes": "sc-inqUgg sc-iWdIcl blYnFE",
+      "reactEvent": true
+    }
+  ]
+}
