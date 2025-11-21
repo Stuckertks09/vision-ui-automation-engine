@@ -71,7 +71,7 @@ A lightweight React + Tailwind UI allows reviewers to browse:
 - Reasoning
 - Raw DOM metadata
 
-Visit: **[https://soft-light-take-home-o6l10x2y7-stuckertks09s-projects.vercel.app/]**
+Visit: **[https://soft-light-take-home.vercel.app/)]**
 
 ---
 
@@ -510,7 +510,7 @@ A short Loom video is included explaining one workflow and the UI dataset viewer
 
 ## 📁 Dataset Viewer (React + Tailwind)
 
-Located: **[https://soft-light-take-home-o6l10x2y7-stuckertks09s-projects.vercel.app/]**
+Located: **[https://soft-light-take-home.vercel.app/)]**
 
 This viewer displays:
 - **Left sidebar:** All tasks
@@ -537,7 +537,7 @@ The agent successfully navigates 4 distinct workflows without any pre-programmed
 ## 📬 Submission
 
 - **Loom:** [https://www.loom.com/share/64147ba039654c4d854840102ad43332]
-- **Dataset:** Available at [https://soft-light-take-home-o6l10x2y7-stuckertks09s-projects.vercel.app/]
+- **Dataset:** Available at **[https://soft-light-take-home.vercel.app/)]**
 
 ---
 
