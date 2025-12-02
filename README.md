@@ -1,12 +1,12 @@
-# Agent B (UI Workflow Capture System)
+# Vision-Driven UI Automation Engine
 
-This repository contains my implementation of Agent B, an autonomous UI-navigation agent capable of interpreting natural-language instructions, navigating live web applications, and capturing each intermediate UI state (including views without unique URLs). 
+This repository contains my implementation of Vision-Guided Interaction Agent, an autonomous UI-navigation agent capable of interpreting natural-language instructions, navigating live web applications, and capturing each intermediate UI state (including views without unique URLs). 
 
 ---
 
 ## 🚀 Overview
 
-Agent B receives tasks from Agent A at runtime such as:
+The Vision-Guided Interaction Agent receives natural-language tasks from a lightweight Task Dispatcher at runtime:
 
 - "How do I create a project in Linear?"
 - "How do I filter a database in Notion?"
@@ -14,7 +14,7 @@ Agent B receives tasks from Agent A at runtime such as:
 The goal is to navigate the real application live, take screenshots, extract DOM structure, plan the next action using an LLM, and repeat until the workflow is complete.
 
 **Key objective:**  
-Agent B should not rely on hardcoded selectors or pre-known task structures. Instead, it should learn the workflow step-by-step through screenshots and DOM sampling.
+Vision-Guided Interaction Agent should not rely on hardcoded selectors or pre-known task structures. Instead, it should learn the workflow step-by-step through screenshots and DOM sampling.
 
 This repo demonstrates that system working across Linear and Notion, capturing UI states for several real tasks end-to-end.
 
@@ -23,7 +23,7 @@ This repo demonstrates that system working across Linear and Notion, capturing U
 ## 📦 Core Features
 
 ### 🔍 Generalizable Action Planning
-Agent B uses:
+Vision-Guided Interaction Agent uses:
 - A screenshot of the current page
 - A filtered DOM snapshot of interactive elements only
 - A normalization function for natural-language tasks
@@ -71,14 +71,14 @@ A lightweight React + Tailwind UI allows reviewers to browse:
 - Reasoning
 - Raw DOM metadata
 
-Visit: **[https://soft-light-take-home.vercel.app/)]**
+Visit: **[https://vision-driven-ui-automation-engine.vercel.app/]**
 
 ---
 
 ## 🔬 Technical Highlights
 
 ### Intelligent DOM Filtering
-Rather than sending the entire DOM to the LLM (which causes hallucinations and token bloat), Agent B:
+Rather than sending the entire DOM to the LLM (which causes hallucinations and token bloat), Vision-Guided Interaction Agent:
 - Samples only **visible, interactive elements**
 - Filters ghost nodes (opacity:0, display:none, off-screen)
 - Strips non-interactive decorative divs
@@ -88,7 +88,7 @@ Rather than sending the entire DOM to the LLM (which causes hallucinations and t
 **Result:** The LLM only references elements that actually exist and can be interacted with. This prevents phantom selector generation and keeps token costs ~60% lower than naive DOM dumps.
 
 ### Framework-Aware Interaction Layer
-Linear and Notion use React synthetic event systems that ignore basic Playwright `.click()` calls. Agent B solves this with:
+Linear and Notion use React synthetic event systems that ignore basic Playwright `.click()` calls. Vision-Guided Interaction Agent solves this with:
 
 **Human-Style Mouse Gestures:**
 ```javascript
@@ -125,7 +125,7 @@ const needsEnterCommit = !hasSubmitButton && isContentEditable;
 This prevents premature commits and lost data across different UI patterns.
 
 ### Smart Scroll Target Resolution
-When scrolling, Agent B:
+When scrolling, Vision-Guided Interaction Agent:
 1. Identifies the **scrollable ancestor** of the target element
 2. Falls back to the **largest scrollable container** in the DOM
 3. Finally scrolls the window if no container exists
@@ -309,7 +309,7 @@ Press “Send” — expected output:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│ AGENT B DECISION LOOP (per step)                        │
+│ Vision-Guided Interaction Agent DECISION LOOP (per step)                        │
 │                                                         │
 │  Screenshot Capture                                     │
 │         ↓                                               │
@@ -413,15 +413,15 @@ It plans actions based on these observations, not pre-programmed sequences.
 
 ## 🌱 Future Considerations
 
-### 🔹 1. Multi-Agent Architecture (Arbitrated Agent B)
+### 🔹 1. Multi-Agent Architecture (Arbitrated Vision-Guided Interaction Agent)
 
 **Current:** Single agent handles navigation, element classification, typing, modal dismissal, scrolling.
 
-**Proposed:** Split Agent B into specialized sub-agents:
+**Proposed:** Split Vision-Guided Interaction Agent into specialized sub-agents:
 
 ```
 ┌─────────────────────────────────────────────┐
-│ Agent B (Arbitrator)                        │
+│ Vision-Guided Interaction Agent (Arbitrator)                        │
 │  ↓                                          │
 │  ├→ Navigator Agent (page transitions)      │
 │  ├→ Classifier Agent (title vs description) │
@@ -447,7 +447,7 @@ It plans actions based on these observations, not pre-programmed sequences.
 **Proposed:** Index prior DOM snapshots + reasoning → retrieve similar past situations.
 
 **Example scenario:**  
-Agent B encounters a "Create Project" button for the first time. Current behavior: LLM reasons from scratch.
+Vision-Guided Interaction Agent encounters a "Create Project" button for the first time. Current behavior: LLM reasons from scratch.
 
 With memory:
 ```python
@@ -510,7 +510,7 @@ A short Loom video is included explaining one workflow and the UI dataset viewer
 
 ## 📁 Dataset Viewer (React + Tailwind)
 
-Located: **[https://soft-light-take-home.vercel.app/)]**
+Located: **[https://vision-driven-ui-automation-engine.vercel.app/]**
 
 This viewer displays:
 - **Left sidebar:** All tasks
@@ -527,7 +527,7 @@ This implementation focuses on:
 1. **Clean generalization** — No hardcoded selectors or task-specific logic
 2. **Production-grade interaction patterns** — Framework-aware clicks, modal handling, React event dispatch
 3. **Realistic UI interaction** across two complex SPAs (Linear + Notion)
-4. **A structured dataset** suitable for training future Softlight models
+4. **A structured dataset** suitable for training future automation models and specialized sub-agents.
 
 The agent successfully navigates 4 distinct workflows without any pre-programmed knowledge of Linear or Notion's UI structure. It learns each app's interaction patterns through observation and adapts its strategy based on what it sees.
 
@@ -537,7 +537,7 @@ The agent successfully navigates 4 distinct workflows without any pre-programmed
 ## 📬 Submission
 
 - **Loom:** [https://www.loom.com/share/64147ba039654c4d854840102ad43332]
-- **Dataset:** Available at **[https://soft-light-take-home.vercel.app/)]**
+- **Dataset:** Available at **[https://vision-driven-ui-automation-engine.vercel.app/]**
 
 ---
 
